@@ -1,0 +1,20 @@
+query findIssueComments {
+  repository(name:"repo-test555", owner: "the-evil-corporation") {
+    issue(number: 10) {
+      title
+      createdAt
+      # first 10 results
+      comments(first: 10) {
+        # edges.node is where the actual `Comment` object is
+        edges {
+          node {
+            author {
+              avatarUrl
+            }
+            body
+          }
+        }
+      }
+    }
+  }
+}
