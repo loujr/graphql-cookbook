@@ -1,0 +1,5 @@
+query findRepoVisibility {
+  repository(owner:"the-evil-corporation", name:"testrepo-internal") {
+    visibility
+  }
+}
