@@ -1,0 +1,29 @@
+query primaryLanguage ($org: String!, $after: String) {
+  organization(login: $org) {
+    description
+    repositories(first: 10, after:$after){
+      nodes {
+        url
+        primaryLanguage {
+          name
+          id
+        }
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+      totalCount
+    }
+  }
+}
+
+
+Variables
+
+
+{
+  "org": "the-evil-corporation",
+  "after": null
+}
