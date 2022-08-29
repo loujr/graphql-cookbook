@@ -1,0 +1,5 @@
+mutation addComment{
+  addComment(input: {subjectId: "I_kwDOH3Q4Es5QSBNG", body: "this is crazy mutation stuff"}){
+    clientMutationId
+  }
+}
