@@ -1,0 +1,7 @@
+query FindIssueID {
+  repository(owner:"loujr", name:"repo-test555") {
+    issue(number:10) {
+      id
+    }
+  }
+}
