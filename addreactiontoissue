@@ -1,0 +1,10 @@
+mutation AddReactionToIssue {
+  addReaction(input:{subjectId:"I_kwDOH3Q4Es5QSBNG",content:THUMBS_UP}) {
+    reaction {
+      content
+    }
+    subject {
+      id
+    }
+  }
+}
