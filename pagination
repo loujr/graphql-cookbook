@@ -1,0 +1,26 @@
+query pagination ($org: String!, $after: String) {
+  organization(login: $org) {
+    description
+    repositories(first: 2, after: $after) {
+      nodes {
+        url
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+      totalCount
+    }
+  }
+}
+
+
+
+Variables
+
+
+{
+  "org": "the-evil-corporation",
+  "after": null
+}
